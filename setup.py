@@ -6,14 +6,14 @@ from setuptools import setup
 README = Path(__file__).with_name("README.md").read_text(encoding="utf-8")
 
 setup(
-    name="unormuon",
+    name="aurora",
     version="0.1.0",
-    description="UNorMuon optimizers.",
+    description="Aurora optimizers.",
     long_description=README,
     long_description_content_type="text/markdown",
     author="Georgios Vlassis",
-    url="https://github.com/gvlassis/U-NorMuon",
-    py_modules=["unormuon"],
+    url="https://github.com/gvlassis/Aurora",
+    py_modules=["aurora"],
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Developers',
