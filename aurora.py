@@ -1,5 +1,4 @@
 import torch
-import torch.distributed as dist
 
 # From https://github.com/tilde-research/aurora-release/blob/main/src/polar.py
 @torch.no_grad()
@@ -140,6 +139,6 @@ class SingleDeviceAurora(torch.optim.Optimizer):
                 state = self.state[p]
                 if len(state) == 0:
                     state["momentum_buffer"] = torch.zeros_like(p)
-                aurora(p, p.grad, state["momentum_buffer"], group["lr"], group["weight_decay"], beta=group["momentum"])
+                aurora(p, p.grad, state["momentum_buffer"], group["lr"], group["weight_decay"], group["momentum"])
 
         return loss
